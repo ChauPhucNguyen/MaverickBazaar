@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "265785929370",
+    "project_id": "maverickbazaar",
+    "storage_bucket": "maverickbazaar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265785929370:android:fb78d6dad8dc15662e7923",
+        "android_client_info": {
+          "package_name": "com.example.maverickbazaar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "265785929370-a4nuu04b7tkfqlskbeavodkacfe4phdq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYsj-v5gfnicjEjv5O76vJ7_velyuZPAg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "265785929370-a4nuu04b7tkfqlskbeavodkacfe4phdq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
