@@ -15,6 +15,7 @@ public class Clubs extends AppCompatActivity {
         setContentView(R.layout.activity_clubs);
 
         final Button button = (Button) findViewById(R.id.buttonFormClub);
+
         button.setOnClickListener(v -> {
             // Code here executes on main thread after user presses button
             Toast.makeText(getApplicationContext() , "Opening Form", Toast.LENGTH_SHORT).show();

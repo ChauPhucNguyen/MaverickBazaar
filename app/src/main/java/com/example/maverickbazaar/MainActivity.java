@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -47,6 +48,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 logoutUser();
+            }
+        });
+
+        Button buttonHome = findViewById(R.id.enterHome);
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Entering Home Screen", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(view.getContext(), HomeScreen.class);
+                startActivity(intent);
             }
         });
 
