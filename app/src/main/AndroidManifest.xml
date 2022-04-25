@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaverickBazaar">
         <activity
+            android:name=".CreateForm"
+            android:exported="false" />
+        <activity
+            android:name=".Clubs"
+            android:exported="false" />
+        <activity
             android:name=".Register"
             android:exported="false" />
         <activity
