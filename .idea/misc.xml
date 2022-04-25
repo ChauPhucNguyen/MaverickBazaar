@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/bensu/AndroidStudioProjects/MaverickBazaar/app/src/main/res/drawable/round_button.xml" value="0.33" />
+        <entry key="..\:/Users/bensu/AndroidStudioProjects/MaverickBazaar/app/src/main/res/layout/activity_add_item_to_cart.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/bensu/AndroidStudioProjects/MaverickBazaar/app/src/main/res/layout/activity_clubs.xml" value="0.3138888888888889" />
+        <entry key="..\:/Users/bensu/AndroidStudioProjects/MaverickBazaar/app/src/main/res/layout/activity_create_form.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/bensu/AndroidStudioProjects/MaverickBazaar/app/src/main/res/layout/activity_home_screen.xml" value="0.5" />
+        <entry key="..\:/Users/bensu/AndroidStudioProjects/MaverickBazaar/app/src/main/res/layout/activity_list_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/bensu/AndroidStudioProjects/MaverickBazaar/app/src/main/res/layout/activity_login.xml" value="0.3138888888888889" />
+        <entry key="..\:/Users/bensu/AndroidStudioProjects/MaverickBazaar/app/src/main/res/layout/activity_main.xml" value="0.2962962962962963" />
+        <entry key="..\:/Users/bensu/AndroidStudioProjects/MaverickBazaar/app/src/main/res/layout/activity_store.xml" value="0.5" />
+        <entry key="..\:/Users/bensu/AndroidStudioProjects/MaverickBazaar/app/src/main/res/layout/round_button.xml" value="0.35260416666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
