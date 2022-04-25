@@ -30,6 +30,8 @@ public class Exchanges extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exchanges2);
 
+        Button mainActivityButton = findViewById(R.id.backButton);
+
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
         if (mAuth.getCurrentUser() != null) {
@@ -37,6 +39,18 @@ public class Exchanges extends AppCompatActivity {
             return;
         }
 
+        mainActivityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showMainActivity();
+            }
+        });
 
+    }
+
+    private void showMainActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
