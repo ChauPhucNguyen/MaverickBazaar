@@ -19,6 +19,20 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
+        android:id="@+id/homeExchangesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="506dp"
+        android:text="Exchanges"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Store"
+        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Clubs"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
         android:id="@+id/Store"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

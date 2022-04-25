@@ -30,15 +30,6 @@
         tools:layout_editor_absoluteX="158dp"
         tools:layout_editor_absoluteY="190dp" />
 
-    <Button
-        android:id="@+id/filterExchangesButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Filter Exchanges"
-        app:layout_constraintBaseline_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-
-        tools:layout_editor_absoluteY="238dp" />
 
     <Button
         android:id="@+id/backButton"
@@ -47,8 +38,7 @@
         android:text="Back"
         app:layout_constraintBaseline_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="286dp" />
+        tools:layout_editor_absoluteY="430dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

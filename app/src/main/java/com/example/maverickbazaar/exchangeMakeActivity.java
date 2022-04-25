@@ -40,10 +40,6 @@ public class exchangeMakeActivity extends AppCompatActivity {
         Button makeExchangeButton = findViewById(R.id.postExchangeButton);
 
         mAuth = FirebaseAuth.getInstance();
-        if (mAuth.getCurrentUser() != null) {
-            finish();
-            return;
-        }
 
         makeExchangeButton.setOnClickListener(new View.OnClickListener() {
             @Override
