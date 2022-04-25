@@ -29,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
+
+
+
+
         // Initialize Firebase Auth
         FirebaseAuth auth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = auth.getCurrentUser();
@@ -63,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://maverickbazaar-default-rtdb.firebaseio.com");
         DatabaseReference reference = database.getReference("users").child(currentUser.getUid());
-        reference.addValueEventListener(new ValueEventListener() {
+        ValueEventListener valueEventListener = reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userInfo user = snapshot.getValue(userInfo.class);
@@ -72,7 +79,12 @@ public class MainActivity extends AppCompatActivity {
                     tvLastName.setText("Last Name: " + user.lastName);
                     tvEmail.setText("Email: " + user.email);
                 }
+
             }
+
+
+
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -86,4 +98,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    private void showExchangeMenu(){
+        Intent intent = new Intent(MainActivity.this,Exchanges.class);
+        startActivity(intent);
+        finish();
+    }
+
 }

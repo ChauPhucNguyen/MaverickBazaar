@@ -72,6 +72,8 @@ public class exchangeMakeActivity extends AppCompatActivity {
 
         reference = rootNode.getReference("exchanges");
         reference.child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).setValue(exchange);
+
+        showMainActivity();
     }
 
 
