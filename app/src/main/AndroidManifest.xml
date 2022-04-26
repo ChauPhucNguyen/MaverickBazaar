@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaverickBazaar">
         <activity
-            android:name=".addItemToCart"
+            android:name=".Checkout"
+            android:exported="false" />
+        <activity
+            android:name=".itemDisplay"
             android:exported="false" />
         <activity
             android:name=".ListItem"
