@@ -6,22 +6,22 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/RelativeLayout"
+        android:id="@+id/imageView"
         android:layout_width="0dp"
-        android:layout_height="178dp"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/item_price"
+        android:layout_height="188dp"
+        app:layout_constraintBottom_toTopOf="@+id/item_price"
+        app:layout_constraintEnd_toStartOf="@+id/item_name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/item_price"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/item_name"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="30dp"
         android:gravity="center"
         android:hint="Item Name"
         android:padding="8dp"
@@ -29,22 +29,22 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/item_price"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/RelativeLayout"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/item_price"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="608dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="582dp"
         android:ems="10"
         android:hint="item price"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/RelativeLayout"
-        app:layout_constraintTop_toBottomOf="@+id/item_name" />
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/item_name"
+        tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

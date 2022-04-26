@@ -57,7 +57,7 @@ public class RecyclerAdapterStore extends RecyclerView.Adapter<RecyclerAdapterSt
         String callingActivity;
         public ImageViewHolder(@NonNull View itemView, Context context, int[] images, String[] details, int[] prices, String callingActivity) {
             super(itemView);
-            img=itemView.findViewById(R.id.RelativeLayout);
+            img=itemView.findViewById(R.id.imageView);
             img_det=itemView.findViewById(R.id.item_name);
             img_price=itemView.findViewById(R.id.item_price);
             itemView.setOnClickListener(this);
