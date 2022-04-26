@@ -56,8 +56,8 @@ public class RecyclerAdapterClubs extends RecyclerView.Adapter<RecyclerAdapterCl
         String callingActivity;
         public ImageViewHolder(@NonNull View itemView, Context context, int[] images, String[] details, String[] name, String callingActivity) {
             super(itemView);
-            img=itemView.findViewById(R.id.RelativeLayout);
-            img_name=itemView.findViewById(R.id.clubName);
+            img=itemView.findViewById(R.id.club_img);
+            img_name=itemView.findViewById(R.id.club_name);
             img_det=itemView.findViewById(R.id.club_details);
             itemView.setOnClickListener(this);
             this.context=context;
