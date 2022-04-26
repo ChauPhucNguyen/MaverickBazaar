@@ -30,27 +30,25 @@ public class Exchanges extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exchanges2);
 
-        Button mainActivityButton = findViewById(R.id.backButton);
+        final Button mainActivityButton = findViewById(R.id.backButton);
+        mainActivityButton.setOnClickListener(v -> {
+            // Code here executes on main thread after user presses button
+            Intent intent = new Intent(v.getContext(), HomeScreen.class);
+            startActivity(intent);
+        });
+
+        final Button makeExchangeButton = findViewById(R.id.makeExchangesButton);
+        makeExchangeButton.setOnClickListener(v -> {
+            // Code here executes on main thread after user presses button
+            Intent intent = new Intent(v.getContext(), exchangeMakeActivity.class);
+            startActivity(intent);
+        });
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
-        if (mAuth.getCurrentUser() != null) {
-            finish();
-            return;
-        }
 
-        mainActivityButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showMainActivity();
-            }
-        });
+
 
     }
 
-    private void showMainActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
 }

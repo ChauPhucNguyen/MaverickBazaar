@@ -28,6 +28,14 @@ public class HomeScreen extends AppCompatActivity {
             startActivity(intent);
         });
 
+        final Button buttonExchanges = (Button) findViewById(R.id.homeExchangesButton);
+        buttonExchanges.setOnClickListener(v -> {
+            // Code here executes on main thread after user presses button
+            Toast.makeText(HomeScreen.this, "Entering Exchange Screen", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(v.getContext(), Exchanges.class);
+            startActivity(intent);
+        });
+
     }
 
 }

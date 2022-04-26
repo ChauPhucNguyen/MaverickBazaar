@@ -31,11 +31,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
         // Initialize Firebase Auth
         FirebaseAuth auth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = auth.getCurrentUser();
@@ -95,12 +90,6 @@ public class MainActivity extends AppCompatActivity {
     private void logoutUser() {
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(this, Login.class);
-        startActivity(intent);
-        finish();
-    }
-
-    private void showExchangeMenu(){
-        Intent intent = new Intent(MainActivity.this,Exchanges.class);
         startActivity(intent);
         finish();
     }
