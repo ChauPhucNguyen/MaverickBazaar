@@ -11,28 +11,13 @@
         android:layout_width="0dp"
         android:layout_height="143dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="92dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toStartOf="@+id/editItemPrice"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
-
-    <EditText
-        android:id="@+id/editItemName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="156dp"
-        android:ems="10"
-        android:hint="Name of Item"
-        android:inputType="textPersonName|text"
-        app:layout_constraintBottom_toTopOf="@+id/editItemDescription"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
-        app:layout_constraintStart_toEndOf="@+id/itemImageButton"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/editItemPrice"
@@ -46,7 +31,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/itemImageButton"
-        app:layout_constraintTop_toBottomOf="@+id/editItemName" />
+        app:layout_constraintTop_toBottomOf="@+id/editItemName"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="156dp"
+        android:ems="10"
+        android:hint="Name of Item"
+        android:inputType="textPersonName|text"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/editItemDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toEndOf="@+id/itemImageButton"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editItemDescription"

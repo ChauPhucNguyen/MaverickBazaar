@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -16,11 +17,11 @@ public class CreateForm extends AppCompatActivity {
     FirebaseDatabase rootNode;
     DatabaseReference reference;
 
-    String name, email, description;
+    String name,description;
 
     EditText nameInput;
-    EditText emailInput;
     EditText descriptionInput;
+    ImageButton clubImageButton;
 
     Button submitButton;
 
@@ -30,13 +31,11 @@ public class CreateForm extends AppCompatActivity {
         setContentView(R.layout.activity_create_form);
 
         nameInput = (EditText) findViewById(R.id.nameInput);
-        emailInput = (EditText) findViewById(R.id.emailInput);
         descriptionInput = (EditText) findViewById(R.id.descriptionInput);
 
         submitButton = (Button) findViewById(R.id.buttonSubmit);
         submitButton.setOnClickListener(v -> {
            name = nameInput.getText().toString();
-           email = emailInput.getText().toString();
            description = descriptionInput.getText().toString();
 
            Toast.makeText(getApplicationContext() , "Submitted!", Toast.LENGTH_SHORT).show();

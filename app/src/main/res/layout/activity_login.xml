@@ -75,6 +75,16 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#0037FF" />
 
+    <TextView
+        android:id="@+id/tvSwitchToReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:linksClickable="true"
+        android:text="Forgot Password?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#0037FF" />
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

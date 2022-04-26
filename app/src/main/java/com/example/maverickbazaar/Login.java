@@ -1,8 +1,5 @@
 package com.example.maverickbazaar;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +7,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -45,6 +45,14 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 switchToRegister();
+            }
+        });
+
+        TextView tvSwitchToReset = findViewById(R.id.tvSwitchToReset);
+        tvSwitchToReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switchToReset();
             }
         });
     }
@@ -83,6 +91,12 @@ public class Login extends AppCompatActivity {
 
     private void switchToRegister() {
         Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
+        finish();
+    }
+
+    private void switchToReset() {
+        Intent intent = new Intent(this, resetPassword.class);
         startActivity(intent);
         finish();
     }

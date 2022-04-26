@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaverickBazaar">
         <activity
+            android:name=".resetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".clubDisplay"
+            android:exported="false" />
+        <activity
             android:name=".Checkout"
             android:exported="false" />
         <activity
