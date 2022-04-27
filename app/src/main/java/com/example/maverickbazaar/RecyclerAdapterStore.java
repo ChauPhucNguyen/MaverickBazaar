@@ -14,11 +14,11 @@ import androidx.recyclerview.widget.RecyclerView;
 public class RecyclerAdapterStore extends RecyclerView.Adapter<RecyclerAdapterStore.ImageViewHolder> {
     private int[] images;
     private String[] name;
-    int[] prices;
+    double[] prices;
     String callingActivity;
     private Context context;
 
-    public RecyclerAdapterStore(int[] images, String[] name, int[] prices, Context context, String callingActivity){
+    public RecyclerAdapterStore(int[] images, String[] name, double[] prices, Context context, String callingActivity){
         this.images=images;
         this.name=name;
         this.prices=prices;
@@ -39,7 +39,7 @@ public class RecyclerAdapterStore extends RecyclerView.Adapter<RecyclerAdapterSt
         int image_id=images[position];
         holder.img.setImageResource(image_id);
         holder.img_det.setText(name[position]);
-        holder.img_price.setText(Integer.toString(prices[position]));
+        holder.img_price.setText(Double.toString(prices[position]));
     }
 
     @Override
@@ -53,9 +53,9 @@ public class RecyclerAdapterStore extends RecyclerView.Adapter<RecyclerAdapterSt
         Context context;
         int[] images;
         String[] details;
-        int[] prices;
+        double[] prices;
         String callingActivity;
-        public ImageViewHolder(@NonNull View itemView, Context context, int[] images, String[] details, int[] prices, String callingActivity) {
+        public ImageViewHolder(@NonNull View itemView, Context context, int[] images, String[] details, double[] prices, String callingActivity) {
             super(itemView);
             img=itemView.findViewById(R.id.imageView);
             img_det=itemView.findViewById(R.id.item_name);
@@ -73,7 +73,7 @@ public class RecyclerAdapterStore extends RecyclerView.Adapter<RecyclerAdapterSt
             Intent intent=new Intent(context,itemDisplay.class);
             System.out.println(callingActivity);
             intent.putExtra("image_id",images[getAdapterPosition()]);
-            intent.putExtra("item_details",details[getAdapterPosition()]);
+            intent.putExtra("item_name",details[getAdapterPosition()]);
             intent.putExtra("item_price",prices[getAdapterPosition()]);
             intent.putExtra("CALLING_ACTIVITY",callingActivity);
             context.startActivity(intent);
