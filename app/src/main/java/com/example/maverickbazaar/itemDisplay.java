@@ -26,17 +26,21 @@ public class itemDisplay extends AppCompatActivity {
 
         imageView.setImageResource((getIntent().getIntExtra("image_id",00)));
         name.setText(getIntent().getStringExtra("item_name"));
-        price.setText(Integer.toString(getIntent().getIntExtra("item_price",00)));
+        price.setText(Double.toString(getIntent().getDoubleExtra("item_price",00)));
 
-        final String item_name = getIntent().getStringExtra("item_details");
+        final String item_name = getIntent().getStringExtra("item_name");
         final int img = getIntent().getIntExtra("imageID", 00);
-        final int item_price = getIntent().getIntExtra("item_price",00);
+        final double item_price = getIntent().getDoubleExtra("item_price",00);
+        final double item_tax = 0.37;
+        final double item_total = 6.36;
 
         order.setOnClickListener(v -> {
             Intent intent=new Intent(itemDisplay.this,Checkout.class);
-            intent.putExtra("Item_Name",item_name);
-            intent.putExtra("imageID",img);
-            intent.putExtra("Item_Name",item_price);
+            intent.putExtra("item_name",item_name);
+            intent.putExtra("image_ID",img);
+            intent.putExtra("item_price",item_price);
+            intent.putExtra("item_tax",item_tax);
+            intent.putExtra("item_total",item_total);
             startActivity(intent);
         });
 

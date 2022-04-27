@@ -6,4 +6,72 @@
     android:layout_height="match_parent"
     tools:context=".Checkout">
 
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="15dp"
+        android:hint="itemName"
+        app:layout_constraintBottom_toTopOf="@+id/item_display"
+        app:layout_constraintEnd_toEndOf="@+id/payment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="196dp"
+        android:text="Proceed to Payments"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Total" />
+
+    <TextView
+        android:id="@+id/SubTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="11dp"
+        android:hint="SubTotal"
+        app:layout_constraintBottom_toTopOf="@+id/Taxes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_display" />
+
+    <TextView
+        android:id="@+id/Taxes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="9dp"
+        android:hint="Taxes"
+        app:layout_constraintBottom_toTopOf="@+id/Total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SubTotal" />
+
+    <ImageView
+        android:id="@+id/item_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="68dp"
+        app:layout_constraintBottom_toTopOf="@+id/SubTotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/Total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="84dp"
+        android:hint="Total"
+        app:layout_constraintBottom_toTopOf="@+id/payment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Taxes" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaverickBazaar">
         <activity
+            android:name=".Payments"
+            android:exported="false" />
+        <activity
+            android:name=".HomeScreen"
+            android:exported="false" />
+        <activity
             android:name=".resetPassword"
             android:exported="false" />
         <activity
@@ -30,9 +36,6 @@
             android:exported="false" />
         <activity
             android:name=".Store"
-            android:exported="false" />
-        <activity
-            android:name=".HomeScreen"
             android:exported="false" />
         <activity
             android:name=".exchangeMakeActivity"
