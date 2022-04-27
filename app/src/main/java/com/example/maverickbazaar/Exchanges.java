@@ -44,8 +44,12 @@ public class Exchanges extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // Initialize Firebase Auth
-        mAuth = FirebaseAuth.getInstance();
+        final Button viewExchangeButton = findViewById(R.id.viewExchangesButton);
+        viewExchangeButton.setOnClickListener(v -> {
+            // Code here executes on main thread after user presses button
+            Intent intent = new Intent(v.getContext(), ExchangeList.class);
+            startActivity(intent);
+        });
 
 
 
