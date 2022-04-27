@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class HomeScreen extends AppCompatActivity {
@@ -14,21 +15,21 @@ public class HomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
-        final Button buttonStore = (Button) findViewById(R.id.Store);
+        final ImageButton buttonStore = (ImageButton) findViewById(R.id.Store);
         buttonStore.setOnClickListener(v -> {
             // Code here executes on main thread after user presses button
             Intent intent = new Intent(v.getContext(), Store.class);
             startActivity(intent);
         });
 
-        final Button buttonClubs = (Button) findViewById(R.id.Clubs);
+        final ImageButton buttonClubs = (ImageButton) findViewById(R.id.Clubs);
         buttonClubs.setOnClickListener(v -> {
             // Code here executes on main thread after user presses button
             Intent intent = new Intent(v.getContext(), Clubs.class);
             startActivity(intent);
         });
 
-        final Button buttonExchanges = (Button) findViewById(R.id.homeExchangesButton);
+        final ImageButton buttonExchanges = (ImageButton) findViewById(R.id.makeExchanges);
         buttonExchanges.setOnClickListener(v -> {
             // Code here executes on main thread after user presses button
             Toast.makeText(HomeScreen.this, "Entering Exchange Screen", Toast.LENGTH_SHORT).show();

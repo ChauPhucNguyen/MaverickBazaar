@@ -27,7 +27,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="17dp"
         android:layout_weight="1" />
 
     <TextView
@@ -41,7 +41,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="19dp"
         android:layout_weight="1" />
 
     <TextView
@@ -65,6 +65,12 @@
         android:text="Email:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="289dp"
+        app:srcCompat="@drawable/uta" />
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -74,6 +80,6 @@
         android:id="@+id/enterHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Enter Home Screen" />
 
 </LinearLayout>
