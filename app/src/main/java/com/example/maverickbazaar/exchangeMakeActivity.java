@@ -57,6 +57,7 @@ public class exchangeMakeActivity extends AppCompatActivity {
         String headerInput = headerInputEdit.getText().toString();
         String bodyInput = bodyInputEdit.getText().toString();
 
+        //String id = reference.push().getKey();
 
         if (headerInput.isEmpty() || bodyInput.isEmpty()) {
             Toast.makeText(this, "Please fill all fields", Toast.LENGTH_LONG).show();
@@ -67,7 +68,7 @@ public class exchangeMakeActivity extends AppCompatActivity {
         rootNode = FirebaseDatabase.getInstance("https://maverickbazaar-default-rtdb.firebaseio.com");
 
         reference = rootNode.getReference("exchanges");
-        reference.child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).setValue(exchange);
+        reference.push().setValue(exchange);
 
         showMainActivity();
     }
