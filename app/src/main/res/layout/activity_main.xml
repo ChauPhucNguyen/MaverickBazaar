@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/utaorange"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/TitleSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="178dp"
+        android:layout_marginBottom="121dp"
+        android:text="MavSearch"
+        android:textColor="@color/black"
+        android:textSize="45dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/ResultsSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/SearchEntry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="568dp"
+        android:ems="10"
+        android:hint="Enter search query"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ResultsSearch"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="43dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/SearchEntry"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TitleSearch" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/SearchResults"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></androidx.recyclerview.widget.RecyclerView>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="568dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SearchEntry"
+        app:layout_constraintTop_toBottomOf="@+id/SearchResults"
+        app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
