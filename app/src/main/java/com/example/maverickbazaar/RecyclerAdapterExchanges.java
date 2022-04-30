@@ -32,13 +32,15 @@ public class RecyclerAdapterExchanges extends RecyclerView.Adapter<RecyclerAdapt
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.exchangelayout,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.exchangelayout,parent,false);
         return new MyViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         exchangeInfo currentExchange = list.get(position);
+
+
         holder.header.setText(currentExchange.getHeader());
         holder.body.setText(currentExchange.getBody());
     }
@@ -46,6 +48,11 @@ public class RecyclerAdapterExchanges extends RecyclerView.Adapter<RecyclerAdapt
     @Override
     public int getItemCount() {
         return list.size();
+    }
+
+    @Override
+    public long getItemId(int position){
+        return position;
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{

@@ -69,6 +69,7 @@ public class exchangeMakeActivity extends AppCompatActivity {
 
         reference = rootNode.getReference("exchanges");
         reference.push().setValue(exchange);
+        Toast.makeText(getApplicationContext() , "Exchange has been made", Toast.LENGTH_SHORT).show();
 
         showMainActivity();
     }
