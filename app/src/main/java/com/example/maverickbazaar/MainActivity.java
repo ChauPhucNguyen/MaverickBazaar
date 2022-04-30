@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonHome = findViewById(R.id.enterHome);
+        ImageButton buttonHome = findViewById(R.id.enterHome);
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
