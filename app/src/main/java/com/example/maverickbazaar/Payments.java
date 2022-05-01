@@ -1,5 +1,6 @@
 package com.example.maverickbazaar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,7 +11,20 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Calendar;
+import java.util.Date;
+
 public class Payments extends AppCompatActivity {
+    private FirebaseAuth mAuth;
+    private FirebaseDatabase rootNode;
+    private DatabaseReference reference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,9 +61,12 @@ public class Payments extends AppCompatActivity {
                 String cardExpirationString = cardExpiration.getText().toString();
 
                 if(cardNameString.equals("John") && cardNumberString.equals("123") && cardCVVString.equals("420") && cardExpirationString.equals("4/20")){
-                    Toast.makeText(Payments.this,"Successful payment",Toast.LENGTH_SHORT).show();
-                    switchMainActivity();
+                    Toast.makeText(Payments.this,"Successful payment, order has been made",Toast.LENGTH_SHORT).show();
 
+                    //This is an addition to allow the user to make an order thru this class specifically
+                    makeOrder();
+
+                    switchMainActivity();
                 }
                 else{
                     Toast.makeText(Payments.this,"Invalid information, please try again",Toast.LENGTH_SHORT).show();
@@ -58,9 +75,34 @@ public class Payments extends AppCompatActivity {
         });
     }
 
+    private void makeOrder() {
+        mAuth = FirebaseAuth.getInstance();
+
+        String currentDate, currentUserString;
+
+        //TODO: Find the date and find the user
+        Date currentTime = Calendar.getInstance().getTime();
+        currentDate = currentTime.toString();
+
+
+        rootNode = FirebaseDatabase.getInstance("https://maverickbazaar-default-rtdb.firebaseio.com");
+
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        currentUserString = currentUser.getEmail();
+
+
+        orderInfo userOrder = new orderInfo(currentDate, currentUserString);
+
+        reference = rootNode.getReference("orders");
+        reference.push().setValue(userOrder);
+    }
+
     private void switchMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }
+
+
 }
