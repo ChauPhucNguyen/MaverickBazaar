@@ -37,6 +37,14 @@ public class HomeScreen extends AppCompatActivity {
             startActivity(intent);
         });
 
+        final ImageButton buttonOrder = (ImageButton) findViewById(R.id.viewOrderHistory);
+        buttonOrder.setOnClickListener(v -> {
+            // Code here executes on main thread after user presses button
+            Toast.makeText(HomeScreen.this, "Entering Order History Screen", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(v.getContext(), orderHistoryList.class);
+            startActivity(intent);
+        });
+
     }
 
 }

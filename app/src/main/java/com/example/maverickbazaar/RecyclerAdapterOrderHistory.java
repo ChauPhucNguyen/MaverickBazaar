@@ -23,10 +23,10 @@ import android.os.Bundle;
 
 public class RecyclerAdapterOrderHistory extends RecyclerView.Adapter<RecyclerAdapterOrderHistory.MyViewHolder> {
     Context context;
-    ArrayList<exchangeInfo> list;
+    ArrayList<orderInfo> list;
 
 
-    public RecyclerAdapterOrderHistory(Context context, ArrayList<exchangeInfo> list){
+    public RecyclerAdapterOrderHistory(Context context, ArrayList<orderInfo> list){
         this.context = context;
         this.list=list;
     }
@@ -34,17 +34,17 @@ public class RecyclerAdapterOrderHistory extends RecyclerView.Adapter<RecyclerAd
     @NonNull
     @Override
     public RecyclerAdapterOrderHistory.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.exchangelayout,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_order_history_list,parent,false);
         return new RecyclerAdapterOrderHistory.MyViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapterOrderHistory.MyViewHolder holder, int position) {
-        exchangeInfo currentExchange = list.get(position);
+        orderInfo currentOrder = list.get(position);
 
 
-        holder.header.setText(currentExchange.getHeader());
-        holder.body.setText(currentExchange.getBody());
+        holder.order.setText(currentOrder.getDate());
+        holder.user.setText(currentOrder.getUser());
     }
 
     @Override
@@ -58,11 +58,11 @@ public class RecyclerAdapterOrderHistory extends RecyclerView.Adapter<RecyclerAd
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView header, body;
+        TextView order, user;
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
-            header= itemView.findViewById(R.id.headerView);
-            body  = itemView.findViewById(R.id.bodyView);
+            order = itemView.findViewById(R.id.orderDateView);
+            user  = itemView.findViewById(R.id.orderUserView);
         }
     }
 }

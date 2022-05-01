@@ -19,7 +19,8 @@
             android:exported="false" />
         <activity
             android:name=".RecyclerAdapterOrderHistory"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Payments"
             android:exported="false" />

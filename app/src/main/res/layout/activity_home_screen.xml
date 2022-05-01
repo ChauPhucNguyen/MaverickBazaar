@@ -99,6 +99,38 @@
         app:layout_constraintVertical_bias="0.322"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="215dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="194dp"
+        android:background="#035595"
+        android:text="Store"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.985"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.438"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/viewOrderHistory"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:background="@drawable/storeicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintLeft_toRightOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6"
+        tools:ignore="SpeakableTextPresentCheck" />
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="421dp"

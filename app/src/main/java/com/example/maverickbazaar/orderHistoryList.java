@@ -25,11 +25,9 @@ import java.util.ArrayList;
 
 public class orderHistoryList extends AppCompatActivity {
     RecyclerView recyclerView;
-    ArrayList<exchangeInfo> list;
+    ArrayList<orderInfo> list;
     DatabaseReference databaseReference;
-    RecyclerAdapterExchanges adapter;
-
-    EditText editText;
+    RecyclerAdapterOrderHistory adapter;
 
     @Override
     public void onBackPressed() {
@@ -41,21 +39,21 @@ public class orderHistoryList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recycler_adapter_exchanges);
+        setContentView(R.layout.activity_recycler_adapter_order_history);
 
-        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerViewOrder);
         databaseReference = FirebaseDatabase.getInstance("https://maverickbazaar-default-rtdb.firebaseio.com").getReference("orders");
         list = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new RecyclerAdapterExchanges(this, list);
+        adapter = new RecyclerAdapterOrderHistory(this, list);
         recyclerView.setAdapter(adapter);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    exchangeInfo exchange = dataSnapshot.getValue(exchangeInfo.class);
-                    list.add(exchange);
+                    orderInfo order = dataSnapshot.getValue(orderInfo.class);
+                    list.add(order);
                 }
                 adapter.notifyDataSetChanged();
             }

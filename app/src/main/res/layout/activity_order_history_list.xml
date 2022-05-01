@@ -6,25 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".orderHistoryList">
 
+    <ImageView
+        android:id="@+id/orderImgLayout"
+        android:layout_width="160dp"
+        android:layout_height="145dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/orderimage"
+        android:padding="5dp" />
 
     <TextView
-        android:id="@+id/headerView"
+        android:id="@+id/orderDateView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/textView13"
         android:text="Button" />
 
     <TextView
+        android:id="@+id/orderUserView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/orderDateView"
+        android:layout_toRightOf="@+id/textView14"
+        android:text="TextView" />
+
+    <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Order Date: " />
-
+        android:layout_toRightOf="@+id/orderImgLayout"
+        android:text="Order was made on:" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView13"
-        android:text="_________" />
+        android:layout_toRightOf="@+id/orderImgLayout"
+        android:text="Order was made by:" />
+
 </RelativeLayout>
