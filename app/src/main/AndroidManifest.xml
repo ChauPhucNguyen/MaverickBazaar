@@ -15,6 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaverickBazaar">
         <activity
+            android:name=".orderHistoryList"
+            android:exported="false" />
+        <activity
+            android:name=".RecyclerAdapterOrderHistory"
+            android:exported="false" />
+        <activity
             android:name=".Payments"
             android:exported="false" />
         <activity

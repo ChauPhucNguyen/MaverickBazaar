@@ -21,6 +21,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import android.os.Bundle;
 
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 
@@ -64,6 +66,11 @@ public class exchangeMakeActivity extends AppCompatActivity {
             return;
         }
 
+        if(appropriateExchange(headerInput)||appropriateExchange(bodyInput)){
+            Toast.makeText(this, "This exchange contains profane words, please revise it.", Toast.LENGTH_LONG).show();
+            return;
+        }
+
         exchangeInfo exchange = new exchangeInfo(headerInput,bodyInput);
         rootNode = FirebaseDatabase.getInstance("https://maverickbazaar-default-rtdb.firebaseio.com");
 
@@ -72,6 +79,19 @@ public class exchangeMakeActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext() , "Exchange has been made", Toast.LENGTH_SHORT).show();
 
         showMainActivity();
+    }
+
+    private boolean appropriateExchange(String stringInput){
+        String[] profanities = {"fuck", "shit", "faggot", "retard", "porn", "TESTINGCASE1"};
+        //Yes, these are bad words, but this is going to help prevent bad words in the future, except TESTINGCASE1
+
+        for(String regex: profanities){
+            if(stringInput.contains(regex)){
+                return true;
+            }
+        }
+
+        return false;
     }
 
 
