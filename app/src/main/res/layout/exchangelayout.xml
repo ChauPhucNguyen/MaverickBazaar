@@ -7,6 +7,14 @@
     android:layout_height="wrap_content"
     tools:context=".ExchangeList">
 
+    <ImageView
+        android:id="@+id/exchangeImgLayout"
+        android:layout_width="160dp"
+        android:layout_height="145dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/exchangeimage"
+        android:padding="5dp" />
 
     <TextView
         android:id="@+id/headerView"
@@ -27,18 +35,15 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/exchangeImgLayout"
         android:text="Header:" />
+
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView13"
+        android:layout_toRightOf="@+id/exchangeImgLayout"
         android:text="Body:" />
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView14"
-        android:text="_________" />
 </RelativeLayout>
