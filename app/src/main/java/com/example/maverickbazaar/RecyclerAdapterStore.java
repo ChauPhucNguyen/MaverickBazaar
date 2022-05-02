@@ -47,7 +47,7 @@ public class RecyclerAdapterStore extends RecyclerView.Adapter<RecyclerAdapterSt
         return images.length;
     }
 
-    public static class ImageViewHolder extends RecyclerView.ViewHolder  implements View.OnClickListener{
+    public static class ImageViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView img;
         TextView img_det,img_price;
         Context context;

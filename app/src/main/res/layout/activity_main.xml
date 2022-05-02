@@ -63,7 +63,7 @@
 
     <ImageButton
         android:id="@+id/enterHome"
-        android:layout_width="422dp"
+        android:layout_width="0dp"
         android:layout_height="65dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,7 +76,7 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="393dp"
+        android:layout_width="0dp"
         android:layout_height="171dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,7 +89,7 @@
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="111dp"
-        android:layout_height="37dp"
+        android:layout_height="48dp"
         android:background="@drawable/transparent"
         android:text="Logout"
         android:textColor="#F6F6F6"
@@ -125,9 +125,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977" />
+        app:layout_constraintVertical_bias="0.976" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

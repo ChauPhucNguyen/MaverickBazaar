@@ -76,7 +76,7 @@
 
     <ImageButton
         android:id="@+id/payment"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="74dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,8 +90,8 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="385dp"
-        android:layout_height="46dp"
+        android:layout_width="393dp"
+        android:layout_height="56dp"
         android:gravity="center"
         android:text="Proceed to Payments"
         android:textColor="#F6F5F5"
@@ -99,10 +99,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.817" />
+        app:layout_constraintVertical_bias="0.826" />
 
     <ImageView
         android:id="@+id/imageView3"

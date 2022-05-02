@@ -157,7 +157,7 @@
 
     <TextView
         android:id="@+id/paymentType"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle_noangles"
         android:text="Select Payment Type"
@@ -199,7 +199,7 @@
 
     <ImageView
         android:id="@+id/imageView16"
-        android:layout_width="410dp"
+        android:layout_width="0dp"
         android:layout_height="58dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

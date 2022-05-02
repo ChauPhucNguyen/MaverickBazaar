@@ -10,8 +10,6 @@
         android:id="@+id/buttonFormClub"
         android:layout_width="141dp"
         android:layout_height="49dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="49dp"
         android:background="@drawable/transparent"
         android:text="Form Club"
         android:textColor="#F6F6F6"
@@ -19,10 +17,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.939" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvClubs"
@@ -30,10 +28,10 @@
         android:layout_height="567dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.646" />
 
     <ImageView
         android:id="@+id/imageView18"
@@ -41,10 +39,37 @@
         android:layout_height="53dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintHorizontal_bias="0.941"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.933"
+        app:layout_constraintVertical_bias="0.945"
         app:srcCompat="@drawable/rectangle" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="415dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/rectangle_noangles" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="410dp"
+        android:layout_height="55dp"
+        android:text="Clubs"
+        android:textAlignment="center"
+        android:textColor="#F6F6F6"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

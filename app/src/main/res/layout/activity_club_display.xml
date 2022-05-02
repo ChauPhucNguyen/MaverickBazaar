@@ -6,47 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".clubDisplay">
 
-    <ImageView
-        android:id="@+id/clubImg"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:padding="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/clubName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/joinClub"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="43dp"
+        android:layout_width="134dp"
+        android:layout_height="48dp"
+        android:background="@drawable/transparent"
         android:text="Join Club"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clubDetails" />
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.959" />
 
     <TextView
         android:id="@+id/clubName"
-        android:layout_width="416dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:hint="Club Name"
-        app:layout_constraintBottom_toTopOf="@+id/clubDetails"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clubImg" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52" />
 
     <TextView
         android:id="@+id/clubDetails"
-        android:layout_width="413dp"
+        android:layout_width="0dp"
         android:layout_height="233dp"
-        android:layout_marginBottom="79dp"
         android:hint="club details"
-        app:layout_constraintBottom_toTopOf="@+id/joinClub"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clubName" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.803" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.013"
+        app:srcCompat="@drawable/utaclubimage" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="137dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.958"
+        app:srcCompat="@drawable/rectangle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

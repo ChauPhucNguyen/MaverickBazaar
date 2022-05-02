@@ -12,8 +12,8 @@
         android:layout_height="145dp"
         android:layout_marginRight="12dp"
         android:layout_marginBottom="12dp"
-        android:src="@drawable/orderimage"
-        android:padding="5dp" />
+        android:padding="5dp"
+        android:src="@drawable/orderimage" />
 
     <TextView
         android:id="@+id/orderDateView"
@@ -52,5 +52,17 @@
         android:layout_marginTop="60dp"
         android:layout_toRightOf="@+id/textView13"
         android:text="Order was made by:" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#035595"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
 
 </RelativeLayout>

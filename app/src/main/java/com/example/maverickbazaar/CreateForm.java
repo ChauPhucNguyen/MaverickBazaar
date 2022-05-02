@@ -67,15 +67,14 @@ public class CreateForm extends AppCompatActivity {
         EditText club_details= findViewById(R.id.editClubDescription);
 
         String clubName = club_name.getText().toString();
-        String clubDescription = club_details.getText().toString();
+        String clubDetails = club_details.getText().toString();
 
-        if (clubName.isEmpty() || clubDescription.isEmpty()) {
+        if (clubName.isEmpty() || clubDetails.isEmpty()) {
             Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
             return;
         }
 
-
-        clubInfo club = new clubInfo(clubName,clubDescription);
+        clubInfo club = new clubInfo(clubName,clubDetails);
         rootNode = FirebaseDatabase.getInstance("https://maverickbazaar-default-rtdb.firebaseio.com");
         reference = rootNode.getReference("clubs");
         reference.push().setValue(club);

@@ -64,6 +64,7 @@ public class RecyclerAdapterClubs extends RecyclerView.Adapter<RecyclerAdapterCl
             super(itemView);
             clubName = itemView.findViewById(R.id.tvClubNames);
             clubDetails  = itemView.findViewById(R.id.tvClubDetails);
+            itemView.setOnClickListener(this);
             this.context = context;
         }
 

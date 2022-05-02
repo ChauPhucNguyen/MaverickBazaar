@@ -49,7 +49,7 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="412dp"
+        android:layout_width="0dp"
         android:layout_height="49dp"
         android:background="@drawable/rectangle_noangles"
         android:text="Body:"
