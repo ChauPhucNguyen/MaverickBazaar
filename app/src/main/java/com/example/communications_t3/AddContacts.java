@@ -1,15 +1,22 @@
 package com.example.communications_t3;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -33,29 +40,27 @@ public class AddContacts extends AppCompatActivity {
         Button EnterInfo = (Button) findViewById(R.id.SubmitButton);
         Button ReturnChatPg = (Button)findViewById(R.id.ReturnButton);
 
-        //let's see if this works - print out a notification with the data
 
         CharSequence TestText = ("Submitted");
         Context context = getApplicationContext();
         int duration = Toast.LENGTH_SHORT;
         EnterInfo.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                String Contact = ContactName.getText().toString();
+                String ContactFullName = ContactName.getText().toString();
                 String CtPhone = ContactPhone.getText().toString();
                 HashMap<String,String> ContactMap = new HashMap<>();
-                ContactMap.put("Name",Contact);
+                ContactMap.put("Name",ContactFullName);
                 ContactMap.put("phone",CtPhone);
                 mDatabaseReference.push().setValue(ContactMap);
                 Toast.makeText(context,TestText,duration).show();
             }
-            });
+        });
 
         ReturnChatPg.setOnClickListener(new View.OnClickListener(){
             public void onClick(View r){
                 startActivity(new Intent(AddContacts.this,MainActivity.class));
             }
         });
-
 
     }
 }
