@@ -31,9 +31,10 @@ public class itemDisplay extends AppCompatActivity {
 
         final String item_name = getIntent().getStringExtra("item_name");
         final int img = getIntent().getIntExtra("imageID", 00);
-        final double item_price = getIntent().getDoubleExtra("item_price",00);
-        final double item_tax = 0.37;
-        final double item_total = 6.36;
+        double item_price = getIntent().getDoubleExtra("item_price",00);
+        double salesTax = .0625;
+        double item_tax = ((double) item_price*salesTax);
+        double item_total = ((double) item_price + item_tax);
 
         order.setOnClickListener(v -> {
             Intent intent=new Intent(itemDisplay.this,Checkout.class);

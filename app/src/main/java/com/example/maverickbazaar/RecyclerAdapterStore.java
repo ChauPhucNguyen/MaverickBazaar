@@ -71,7 +71,6 @@ public class RecyclerAdapterStore extends RecyclerView.Adapter<RecyclerAdapterSt
         @Override
         public void onClick(View v) {
             Intent intent=new Intent(context,itemDisplay.class);
-            System.out.println(callingActivity);
             intent.putExtra("image_id",images[getAdapterPosition()]);
             intent.putExtra("item_name",details[getAdapterPosition()]);
             intent.putExtra("item_price",prices[getAdapterPosition()]);

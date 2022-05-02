@@ -35,7 +35,7 @@ public class clubDisplay extends AppCompatActivity {
 
         join.setOnClickListener(v -> {
             Toast.makeText(clubDisplay.this, "You have joined the club", Toast.LENGTH_SHORT).show();
-            Intent intent=new Intent(clubDisplay.this,Clubs.class);
+            Intent intent=new Intent(clubDisplay.this, clubList.class);
             startActivity(intent);
         });
     }

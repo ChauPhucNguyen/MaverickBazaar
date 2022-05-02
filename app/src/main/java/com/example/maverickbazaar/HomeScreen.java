@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -28,7 +27,7 @@ public class HomeScreen extends AppCompatActivity {
         final ImageButton buttonClubs = (ImageButton) findViewById(R.id.Clubs);
         buttonClubs.setOnClickListener(v -> {
             // Code here executes on main thread after user presses button
-            Intent intent = new Intent(v.getContext(), Clubs.class);
+            Intent intent = new Intent(v.getContext(), clubList.class);
             startActivity(intent);
         });
 

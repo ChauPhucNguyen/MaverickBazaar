@@ -50,4 +50,6 @@
         android:layout_toRightOf="@+id/exchangeImgLayout"
         android:text="Body:" />
 
+
+
 </RelativeLayout>

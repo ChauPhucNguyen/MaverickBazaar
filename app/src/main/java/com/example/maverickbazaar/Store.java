@@ -11,9 +11,9 @@ import android.widget.Button;
 
 public class Store extends AppCompatActivity {
 
-    int[] img = {R.drawable.notebook1};
-    String names[] = {"Notebook 1"};
-    double[] prices= {5.99};
+    int[] img = {R.drawable.notebook1, R.drawable.notebook2, R.drawable.book1, R.drawable.pencil1};
+    String names[] = {"Notebook 1", "Notebook 2", "Textbook", "Mechanical Pencil"};
+    double[] prices= {5.99,7.99,129.99,1.99};
     private RecyclerAdapterStore adapter;
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerView recyclerView;
