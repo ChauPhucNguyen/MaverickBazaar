@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 import android.os.Bundle;
 
-public class RecyclerAdapterOrderHistory extends RecyclerView.Adapter<RecyclerAdapterOrderHistory.MyViewHolder> {
+public class RecyclerAdapterOrderHistory extends RecyclerView.Adapter<RecyclerAdapterOrderHistory.MyViewHolder2> {
     Context context;
     ArrayList<orderInfo> list;
 
@@ -33,13 +33,13 @@ public class RecyclerAdapterOrderHistory extends RecyclerView.Adapter<RecyclerAd
 
     @NonNull
     @Override
-    public RecyclerAdapterOrderHistory.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecyclerAdapterOrderHistory.MyViewHolder2 onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_order_history_list,parent,false);
-        return new RecyclerAdapterOrderHistory.MyViewHolder(v);
+        return new RecyclerAdapterOrderHistory.MyViewHolder2(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerAdapterOrderHistory.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerAdapterOrderHistory.MyViewHolder2 holder, int position) {
         orderInfo currentOrder = list.get(position);
 
 
@@ -57,9 +57,9 @@ public class RecyclerAdapterOrderHistory extends RecyclerView.Adapter<RecyclerAd
         return position;
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder2 extends RecyclerView.ViewHolder{
         TextView order, user;
-        public MyViewHolder(@NonNull View itemView){
+        public MyViewHolder2(@NonNull View itemView){
             super(itemView);
             order = itemView.findViewById(R.id.orderDateView);
             user  = itemView.findViewById(R.id.orderUserView);
