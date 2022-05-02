@@ -18,8 +18,11 @@
     <TextView
         android:id="@+id/orderDateView"
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/textView13"
+        android:layout_below="@id/textView13"
+        android:layout_alignLeft="@id/textView13"
+
         android:text="Button" />
 
     <TextView
@@ -27,6 +30,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/orderDateView"
+        android:layout_marginLeft="-125dp"
+        android:layout_marginTop="41dp"
         android:layout_toRightOf="@+id/textView14"
         android:text="TextView" />
 
@@ -34,6 +39,8 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
+        android:layout_marginLeft="12dp"
         android:layout_toRightOf="@+id/orderImgLayout"
         android:text="Order was made on:" />
 
@@ -41,8 +48,9 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView13"
-        android:layout_toRightOf="@+id/orderImgLayout"
+        android:layout_marginLeft="-126dp"
+        android:layout_marginTop="60dp"
+        android:layout_toRightOf="@+id/textView13"
         android:text="Order was made by:" />
 
 </RelativeLayout>
