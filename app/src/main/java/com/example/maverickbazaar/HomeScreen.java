@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class HomeScreen extends AppCompatActivity {
 
@@ -43,6 +46,13 @@ public class HomeScreen extends AppCompatActivity {
             Toast.makeText(HomeScreen.this, "Entering Order History Screen", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(v.getContext(), orderHistoryList.class);
             startActivity(intent);
+        });
+        //fab for chats
+        FloatingActionButton OpenComms = (FloatingActionButton) findViewById(R.id.ChatLinkButton);
+        OpenComms.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View H){
+                startActivity(new Intent(HomeScreen.this,ChatsMainActivity.class));
+            }
         });
 
     }

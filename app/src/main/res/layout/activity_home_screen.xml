@@ -134,8 +134,11 @@
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="421dp"
-        android:layout_height="66dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="575dp"
+        app:layout_constraintBottom_toTopOf="@+id/ChatLinkButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/rectangle" />
@@ -154,5 +157,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.03" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@id/ChatLinkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="34dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@drawable/chaticon" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

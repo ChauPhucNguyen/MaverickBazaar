@@ -68,6 +68,12 @@
             android:name=".Register"
             android:exported="false" />
         <activity
+            android:name=".ChatsMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Text"
+            android:exported="false" />
+        <activity
             android:name=".Login"
             android:exported="false" />
         <activity
